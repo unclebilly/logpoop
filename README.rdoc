@@ -1,6 +1,9 @@
 = logpoop
 
-Description goes here.
+This gem installs a script called 'logpoop' that fills up your active 
+terminal sessions with crap (so that you look really busy).  The 'crap' is from log files found on 
+your system (either from /var/log or from where you choose).  It scrolls by at random speeds and keeps going
+until you ^C it. 
 
 == Contributing to logpoop
  

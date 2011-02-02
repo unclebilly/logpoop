@@ -15,8 +15,8 @@ Jeweler::Tasks.new do |gem|
   gem.name = "logpoop"
   gem.homepage = "http://github.com/unclebilly/logpoop"
   gem.license = "MIT"
-  gem.summary = %Q{TODO: one-line summary of your gem}
-  gem.description = %Q{TODO: longer description of your gem}
+  gem.summary = %Q{Quick, look busy! Print some poop in your terminals!}
+  gem.description = %Q{This gem installs a script called 'logpoop' that, when run, fills up your active terminal sessions with crap (so that you look really busy). }
   gem.email = "billy.reisinger@gmail.com"
   gem.authors = ["Billy Reisinger"]
   # Include your dependencies below. Runtime dependencies are required when using your gem,
@@ -29,13 +29,6 @@ Jeweler::RubygemsDotOrgTasks.new
 require 'rake/testtask'
 Rake::TestTask.new(:test) do |test|
   test.libs << 'lib' << 'test'
-  test.pattern = 'test/**/test_*.rb'
-  test.verbose = true
-end
-
-require 'rcov/rcovtask'
-Rcov::RcovTask.new do |test|
-  test.libs << 'test'
   test.pattern = 'test/**/test_*.rb'
   test.verbose = true
 end
