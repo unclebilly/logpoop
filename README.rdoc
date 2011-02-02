@@ -8,6 +8,12 @@ until you ^C it.
 This script uses +/dev/ttys00*+, and so it's likely only gonna work on a Mac.  It could be easily modified 
 to work on Linux, of course, so pull requests are awesome. 
 
+== Installation
+  [sudo] gem install logpoop
+ 
+== Help
+  logpoop --help
+  
 == Contributing to logpoop
  
 * Check out the latest master to make sure the feature hasn't been implemented or the bug hasn't been fixed yet
