@@ -28,6 +28,7 @@ Gem::Specification.new do |s|
     "VERSION",
     "bin/logpoop",
     "lib/logpoop.rb",
+    "logpoop.gemspec",
     "test/helper.rb",
     "test/test_logpoop.rb"
   ]
