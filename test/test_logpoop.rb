@@ -1,7 +1,8 @@
 require 'helper'
 
 class TestLogpoop < Test::Unit::TestCase
-  should "probably rename this file and start testing for real" do
-    flunk "hey buddy, you should probably rename this file and start testing for real"
+  def test_test
+    ARGV[0], ARGV[1] = "--type", "test"
+    LogPoop.new
   end
 end

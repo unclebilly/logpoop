@@ -27,11 +27,11 @@ Gem::Specification.new do |s|
     "Rakefile",
     "VERSION",
     "bin/logpoop",
-    "lib/logpoop.rb",
     "logpoop.gemspec",
     "test/helper.rb",
     "test/test_logpoop.rb"
-  ]
+  ].concat(Dir.glob(File.join(File.dirname(__FILE__), "lib/**/*")))
+
   s.homepage = %q{http://github.com/unclebilly/logpoop}
   s.licenses = ["MIT"]
   s.require_paths = ["lib"]
