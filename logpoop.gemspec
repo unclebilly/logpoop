@@ -5,11 +5,11 @@
 
 Gem::Specification.new do |s|
   s.name = %q{logpoop}
-  s.version = "0.1.1"
+  s.version = "1.0.0"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Billy Reisinger"]
-  s.date = %q{2011-02-02}
+  s.date = %q{2011-12-01}
   s.default_executable = %q{logpoop}
   s.description = %q{This gem installs a script called 'logpoop' that, when run, fills up your active terminal sessions with crap (so that you look really busy). }
   s.email = %q{billy.reisinger@gmail.com}
@@ -27,15 +27,21 @@ Gem::Specification.new do |s|
     "Rakefile",
     "VERSION",
     "bin/logpoop",
+    "lib/logpoop.rb",
+    "lib/logpoop/runner/context.rb",
+    "lib/logpoop/runner/multi_tail.rb",
+    "lib/logpoop/runner/test_run.rb",
+    "lib/logpoop/simulator/base.rb",
+    "lib/logpoop/simulator/tail_eff.rb",
+    "lib/logpoop/simulator/test_run.rb",
     "logpoop.gemspec",
     "test/helper.rb",
     "test/test_logpoop.rb"
-  ].concat(Dir.glob(File.join(File.dirname(__FILE__), "lib/**/*")))
-
+  ]
   s.homepage = %q{http://github.com/unclebilly/logpoop}
   s.licenses = ["MIT"]
   s.require_paths = ["lib"]
-  s.rubygems_version = %q{1.5.0}
+  s.rubygems_version = %q{1.5.2}
   s.summary = %q{Quick, look busy! Print some poop in your terminals!}
   s.test_files = [
     "test/helper.rb",
