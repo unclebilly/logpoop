@@ -10,7 +10,7 @@ module Runner
 
       # linux
       elsif(this_tty =~ /\/dev\/pts\/[0-9]{1}/)
-        other_ttys=Dir['/dev/pts/*']
+        other_ttys=Dir["/dev/pts/*"].find_all{|t| t=~/[0-9]{1}$/ }
       end
 
       other_ttys.reject!{|t| t == this_tty}
