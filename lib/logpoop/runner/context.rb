@@ -39,7 +39,8 @@ module Runner
     def self.runner(opt)
       {
         :tail => MultiTail,
-        :test => TestRun
+        :test => TestRun,
+        :poop => Poop
       }[opt.to_sym]
     end
   end

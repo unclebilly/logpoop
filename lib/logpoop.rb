@@ -1,5 +1,6 @@
 require 'optparse'
 require 'logpoop/runner/context'
+require 'logpoop/runner/poop'
 require 'logpoop/runner/multi_tail'
 require 'logpoop/runner/test_run'
 require 'logpoop/simulator/base'
@@ -29,7 +30,7 @@ STR
       opt.on("-d", "--log_dir DIRECTORY", "Log directory") do |d|
         options[:log_dir] = d
       end
-      opt.on("-t", "--type TYPE", "Poop type. Available types:\n\ttail - simulate 'tail -f' in all your open terminals\n\ttest - simulate a console test run (needs two terminals open)") do |t|
+      opt.on("-t", "--type TYPE", "Poop type. Available types:\n\tpoop - take a dump in your terminal\n\ttail - simulate 'tail -f' in all your open terminals\n\ttest - simulate a console test run (needs two terminals open)") do |t|
         options[:type] = t
       end
     end

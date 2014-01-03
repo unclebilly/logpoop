@@ -1,6 +1,6 @@
 = logpoop
 
-Logpoop has two poopy modes: 
+Logpoop has three poopy modes: 
 == test
   logpoop -t test [-d DIR]
 Test mode "runs some unit tests" in one terminal and "tails some log file" in another terminal.  Realistic! You are so busy running your tests!  
@@ -9,6 +9,9 @@ Test mode "runs some unit tests" in one terminal and "tails some log file" in an
 Tail eff mode grabs a bunch of log files (either from a folder you specify or
 from /var/log) and simulates "tail -f" in all of your open terminals, while
 varying the speed and intensity.  Whoa, don't bother me - I'm busy!  Move away, plebes.
+== poop
+  logpoop -t poop
+Prints a random ASCII poop in your terminal. OK, so this isn't so useful - but then, neither are you (right now).
 
 == Installation
   [sudo] gem install logpoop
@@ -16,18 +19,8 @@ varying the speed and intensity.  Whoa, don't bother me - I'm busy!  Move away, 
 == Help
   logpoop --help
   
-== Contributing to logpoop
- 
-* Check out the latest master to make sure the feature hasn't been implemented or the bug hasn't been fixed yet
-* Check out the issue tracker to make sure someone already hasn't requested it and/or contributed it
-* Fork the project
-* Start a feature/bugfix branch
-* Commit and push until you are happy with your contribution
-* Make sure to add tests for it. This is important so I don't break it in a future version unintentionally.
-* Please try not to mess with the Rakefile, version, or history. If you want to have your own version, or is otherwise necessary, that is fine, but please isolate to its own commit so I can cherry-pick around it.
-
 == Copyright
 
 Copyright (c) 2011 Billy Reisinger. See LICENSE.txt for
-further details.
+further details. LOL
 
