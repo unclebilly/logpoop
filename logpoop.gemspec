@@ -4,15 +4,14 @@
 # -*- encoding: utf-8 -*-
 
 Gem::Specification.new do |s|
-  s.name = %q{logpoop}
-  s.version = "1.0.1"
+  s.name = "logpoop"
+  s.version = "1.1.0"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Billy Reisinger"]
-  s.date = %q{2011-12-01}
-  s.default_executable = %q{logpoop}
-  s.description = %q{This gem installs a script called 'logpoop' that, when run, fills up your active terminal sessions with crap (so that you look really busy). }
-  s.email = %q{billy.reisinger@gmail.com}
+  s.date = "2014-01-03"
+  s.description = "This gem installs a script called 'logpoop' that, when run, fills up your active terminal sessions with crap (so that you look really busy). "
+  s.email = "billy.reisinger@gmail.com"
   s.executables = ["logpoop"]
   s.extra_rdoc_files = [
     "LICENSE.txt",
@@ -28,8 +27,14 @@ Gem::Specification.new do |s|
     "VERSION",
     "bin/logpoop",
     "lib/logpoop.rb",
+    "lib/logpoop/poops/five.poop",
+    "lib/logpoop/poops/four.poop",
+    "lib/logpoop/poops/one.poop",
+    "lib/logpoop/poops/three.poop",
+    "lib/logpoop/poops/two.poop",
     "lib/logpoop/runner/context.rb",
     "lib/logpoop/runner/multi_tail.rb",
+    "lib/logpoop/runner/poop.rb",
     "lib/logpoop/runner/test_run.rb",
     "lib/logpoop/simulator/base.rb",
     "lib/logpoop/simulator/tail_eff.rb",
@@ -38,11 +43,11 @@ Gem::Specification.new do |s|
     "test/helper.rb",
     "test/test_logpoop.rb"
   ]
-  s.homepage = %q{http://github.com/unclebilly/logpoop}
+  s.homepage = "http://github.com/unclebilly/logpoop"
   s.licenses = ["MIT"]
   s.require_paths = ["lib"]
-  s.rubygems_version = %q{1.5.2}
-  s.summary = %q{Quick, look busy! Print some poop in your terminals!}
+  s.rubygems_version = "1.8.25"
+  s.summary = "Quick, look busy! Print some poop in your terminals!"
   s.test_files = [
     "test/helper.rb",
     "test/test_logpoop.rb"
