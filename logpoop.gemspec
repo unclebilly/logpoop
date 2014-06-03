@@ -19,34 +19,16 @@ Gem::Specification.new do |s|
     "LICENSE.txt",
     "README.md"
   ]
+
   s.files = [
-    ".document",
-    "Gemfile",
-    "Gemfile.lock",
     "LICENSE.txt",
     "README.md",
     "Rakefile",
     "VERSION",
-    "bin/logpoop",
-    "lib/logpoop.rb",
-    "lib/logpoop/poops/five.poop",
-    "lib/logpoop/poops/four.poop",
-    "lib/logpoop/poops/one.poop",
-    "lib/logpoop/poops/three.poop",
-    "lib/logpoop/poops/two.poop",
-    "lib/logpoop/runner/context.rb",
-    "lib/logpoop/runner/make.rb",
-    "lib/logpoop/runner/multi_tail.rb",
-    "lib/logpoop/runner/poop.rb",
-    "lib/logpoop/runner/test_run.rb",
-    "lib/logpoop/simulator/base.rb",
-    "lib/logpoop/simulator/make.rb",
-    "lib/logpoop/simulator/tail_eff.rb",
-    "lib/logpoop/simulator/test_run.rb",
     "logpoop.gemspec",
     "test/helper.rb",
     "test/test_logpoop.rb"
-  ]
+  ].concat(Dir["lib/**/*.rb"])
   s.homepage = "http://github.com/unclebilly/logpoop"
   s.licenses = ["MIT"]
   s.rubygems_version = "2.2.2"

@@ -42,3 +42,4 @@ pkg
 #*.swp
 log/
 .DS_Store
+*.gem
