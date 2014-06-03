@@ -4,10 +4,6 @@ module Simulator
 
     include Simulator::Base
 
-    def initialize(out)
-      self.out = out
-    end
-
     def a_dot_or_an_e_or_an_f
       if(rand(100) % 10 == 0)
         EF[rand(EF.length)]

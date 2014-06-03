@@ -40,7 +40,8 @@ module Runner
       {
         :tail => MultiTail,
         :test => TestRun,
-        :poop => Poop
+        :poop => Poop,
+        :make => Make
       }[opt.to_sym]
     end
   end

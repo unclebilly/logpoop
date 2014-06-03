@@ -1,7 +1,7 @@
 logpoop
 =======
 
-Logpoop has three poopy modes: test, tail eff, and poop. 
+Logpoop has several poopy modes: test, tail eff, poop, and make.
 
 In the case of anything that fills up your terminal with garbage logs, logpoop will chose the largest logfiles from either `/var/log` or the directory you specify (using the `-d` flag).
 
@@ -30,6 +30,14 @@ varying the speed and intensity.  Whoa, don't bother me - I'm busy!  Move away, 
 Prints a random ASCII poop in your terminal. OK, so this isn't so useful - but then, neither are you (right now).
 
 ![Poop Mode](http://unclebilly.github.com/logpoop/images/poop.png)
+
+## make
+
+    logpoop -t make
+
+It takes a really, really long time to compile this little ditty.  If you wait long enough, you will be rewarded with the best binary every made.  Seriously!
+
+![Make Mode](http://unclebilly.github.com/logpoop/images/make.png)
 
 # Installation
     

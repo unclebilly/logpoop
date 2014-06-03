@@ -14,6 +14,10 @@ module Simulator
       clear_screen(out)
     end
 
+    def initialize(out)
+      self.out = out
+    end
+    
     def self.included(base)
       base.class_eval do
         attr_accessor :out
