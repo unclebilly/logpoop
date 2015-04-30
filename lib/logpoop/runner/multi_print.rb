@@ -6,11 +6,23 @@ module Runner
     end
 
     private
+
+    def terminal_size(tty_name)
+      case RUBY_PLATFORM
+      when /darwin/
+        `stty -f #{tty_name} size`
+      when /linux/
+        `stty -F #{tty_name} size`
+      else
+        "80 80"
+      end.strip.split.map(&:to_i)
+    end
+
     def run_all(ttys, text)
       threads = []
       ttys.each do |name, tty|
         threads << Thread.new(name, tty, text) do |myname, mytty, mytext|
-          size = `stty -f #{myname} size`.strip.split.last.to_i rescue 80
+          size      = terminal_size(myname).last
           simulator = Simulator::Print.new(tty, mytext, size)
           Context.simulators << simulator
           simulator.fake_it

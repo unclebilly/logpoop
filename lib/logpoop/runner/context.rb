@@ -19,7 +19,7 @@ module Runner
       end
       Hash[*ios.flatten]
     end
-
+    
     # A list of the currently-running simulators
     def self.simulators
       @@simulators ||= []
