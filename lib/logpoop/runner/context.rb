@@ -1,6 +1,6 @@
 module Runner
   class Context
-    # Get an array of open IO objects attached to existing terminal sessions. The current terminal 
+    # Get a hash of tty names / open IO objects attached to existing terminal sessions. The current terminal 
     # (the one executing this program) will always be first.
     def self.ttys(nums=[])
       this_tty=`tty`.strip
@@ -14,7 +14,10 @@ module Runner
       end
 
       other_ttys.reject!{|t| t == this_tty}
-      [this_tty].concat(other_ttys).map{|f| IO.sysopen(f, 'w')}.map{|n| IO.new(n, 'w')}
+      ios = [this_tty].concat(other_ttys).map do |f| 
+        [f, IO.new(IO.sysopen(f, 'w'), 'w')]
+      end
+      Hash[*ios.flatten]
     end
 
     # A list of the currently-running simulators
@@ -29,7 +32,7 @@ module Runner
 
     def self.run(options={})
       @@options = options
-      runner(@@options[:type]).new.run
+      runner(@@options[:type]).new.run(@@options)
     end
 
     def self.stop 
@@ -41,7 +44,8 @@ module Runner
         :tail => MultiTail,
         :test => TestRun,
         :poop => Poop,
-        :make => Make
+        :make => Make,
+        :print => MultiPrint
       }[opt.to_sym]
     end
   end

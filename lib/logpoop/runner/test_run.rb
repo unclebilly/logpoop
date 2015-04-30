@@ -1,7 +1,7 @@
 module Runner
   class TestRun
-    def run
-      stdout, logout = Context.ttys[0..1]
+    def run(opts={})
+      stdout, logout = Context.ttys.values[0..1]
       log = Context.logs[0]
       threads=[]
       threads << Thread.new(stdout) do |myout|

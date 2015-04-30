@@ -1,7 +1,7 @@
 module Runner
   class Make
-    def run
-      stdout, other_tty = Context.ttys[0..1]
+    def run(opts={})
+      stdout, other_tty = Context.ttys.values[0..1]
       threads = []
       threads << Thread.new(stdout) do |myout|
         sim = Simulator::Make.new(myout)

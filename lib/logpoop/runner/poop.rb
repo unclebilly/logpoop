@@ -2,7 +2,7 @@
 
 module Runner
   class Poop
-    def run
+    def run(opts={})
       puts poop
     end
   

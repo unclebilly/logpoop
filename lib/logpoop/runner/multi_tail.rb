@@ -1,7 +1,7 @@
 module Runner
   class MultiTail
-    def run
-      ttys = Context.ttys
+    def run(opts={})
+      ttys = Context.ttys.values
       logs = Context.logs[0..ttys.length-1]
       run_all(ttys,logs)
     end
