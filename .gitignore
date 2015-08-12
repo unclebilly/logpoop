@@ -43,3 +43,4 @@ pkg
 log/
 .DS_Store
 *.gem
+Gemfile.lock
